@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+}
+
+:root {
+    /* Colors */
+    --eggshell: #fafafa;
+    --mine-shaft: #212121;
+    --mercury: #e8e8e8;
+    --mariner: #3A97D4;
+    --genoa: #20A672;
+    --vesuvius: #F46036;
+    --mojo: #C44B34;
+    --cabaret: #ED5F74;
+    --wisteria: #A34FB4;
+    --fuchsia: #825FC3;
+
+    /* Spacing */
+    --half: calc(var(--default) / 2);
+    --default: 3rem;
+    --double: calc(var(--default) * 2);
+    --in-between: 1.25rem;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background: var(--eggshell);
+    color: var(--mine-shaft);
+    font-size: 1.5rem;
+    line-height: 1.5;
+    overflow-y: scroll;
+    padding: var(--default);
+}
+
+/*
+ * Basics
+ */
+
+a {
+    display: inline-block;
+    color: var(--mojo);
+}
+
+p {
+    max-width: 40rem;
+}
+
+/*
+ * Headings
+ */
+
+h2 {
+    border-bottom: solid 4px var(--mine-shaft);
+    max-width: 50%;
+}
+
+/*
+ * Layout
+ */
+
+main {
+    padding: var(--default) 0;
+}
+
+main * + * {
+    margin-top: var(--in-between);
+}
+
+footer {
+    border-top: solid 4px var(--mariner);
+    padding: var(--default) 0;
+}
+
+/*
+ * Fun stuff
+ */
+
+.tip {
+    padding: var(--half) var(--default);
+    border: solid 4px var(--mojo);
+}
+
+ul {
+    margin-left: 2.5rem;
+    list-style: none;
+}
+
+li {
+    position: relative;
+}
+
+li + li {
+    margin-top: .5rem;
+}
+
+li:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: .3rem;
+    left: -2.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+li:nth-child(odd):before {
+    background: url(hold.png) no-repeat center/cover;
+}
+
+li:nth-child(even):before {
+    background: url(hold2.png) no-repeat center/cover;
+}
+
+li:nth-child(3n+3):before {
+    background: url(hold3.png) no-repeat center/cover;
+}
+
+/* ~ The end ~ */
