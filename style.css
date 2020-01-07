@@ -23,6 +23,7 @@
     --default: 3rem;
     --double: calc(var(--default) * 2);
     --in-between: 1.25rem;
+    --small: .5rem;
 }
 
 body {
@@ -39,12 +40,16 @@ body {
  * Basics
  */
 
+h1, h2, h3, h4, h5 {
+    line-height: 1;
+}
+
 a {
     display: inline-block;
     color: var(--mojo);
 }
 
-p {
+p, ul {
     max-width: 40rem;
 }
 
@@ -55,22 +60,29 @@ p {
 h2 {
     border-bottom: solid 4px var(--mine-shaft);
     max-width: 50%;
+    padding-bottom: var(--small);
 }
 
 /*
  * Layout
  */
 
-main {
-    padding: var(--default) 0;
-}
-
-main * + * {
+header * + *,
+section * + *,
+footer * + * {
     margin-top: var(--in-between);
 }
 
+main {
+    padding: var(--half) 0;
+}
+
+section {
+    padding: var(--half) 0;
+}
+
 footer {
-    border-top: solid 4px var(--mariner);
+    border-top: dashed 4px var(--mine-shaft);
     padding: var(--default) 0;
 }
 
@@ -116,6 +128,13 @@ li:nth-child(even):before {
 
 li:nth-child(3n+3):before {
     background: url(hold3.png) no-repeat center/cover;
+}
+
+@media screen and (max-width: 40rem) {
+    body {
+        padding: var(--half);
+        font-size: 1.2rem;
+    }
 }
 
 /* ~ The end ~ */
