@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+
 }
 
 :root {
@@ -89,7 +90,6 @@ footer {
 
 table {
     border-collapse: collapse;
-    border: solid 4px var(--mine-shaft);
 }
 
 th, td {
@@ -168,6 +168,32 @@ li:nth-child(3n+3):before {
     body {
         padding: var(--half);
         font-size: 1.2rem;
+    }
+
+    /* Change our table rows to columns */
+    table {
+        display: flex;
+    }
+
+    /* List our cells under each other instead of next to */
+    tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Undo the global margin in-between stacked elements */
+    tbody, td, th {
+        margin-top: 0;
+    }
+
+    /* Undo the left border to prevent double borders */
+    tbody td {
+        border-left: none;
+    }
+
+    /* Undo the top border to prevent double borders */
+    td + td, th + th {
+        border-top: none;
     }
 }
 
