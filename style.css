@@ -17,6 +17,7 @@
     --cabaret: #ED5F74;
     --wisteria: #A34FB4;
     --fuchsia: #825FC3;
+    --rajah: #F7CE74;
 
     /* Spacing */
     --half: calc(var(--default) / 2);
@@ -49,13 +50,9 @@ a {
     color: var(--mojo);
 }
 
-p, ul {
+p, ul, blockquote {
     max-width: 40rem;
 }
-
-/*
- * Headings
- */
 
 h2 {
     border-bottom: solid 4px var(--mine-shaft);
@@ -87,12 +84,45 @@ footer {
 }
 
 /*
+ * Tables!!
+ */
+
+table {
+    border-collapse: collapse;
+    border: solid 4px var(--mine-shaft);
+}
+
+th, td {
+    border: solid 4px var(--mine-shaft);
+    padding: var(--small);
+}
+
+th {
+    background-color: var(--rajah);
+}
+
+/*
  * Fun stuff
  */
 
 .tip {
-    padding: var(--half) var(--default);
-    border: solid 4px var(--mojo);
+    padding: var(--half);
+    border-left: solid 4px var(--mojo);
+    background-color: var(--mercury);
+}
+
+blockquote {
+    quotes: "“" "”" "‘" "’";
+    padding: var(--half);
+    border-left: solid 4px var(--mojo);
+    background-color: var(--mercury);
+}
+
+blockquote:before {
+    content: open-quote;
+}
+blockquote:after {
+    content: close-quote;
 }
 
 ul {
@@ -129,6 +159,10 @@ li:nth-child(even):before {
 li:nth-child(3n+3):before {
     background: url(hold3.png) no-repeat center/cover;
 }
+
+/*
+ * Mobile
+ */
 
 @media screen and (max-width: 40rem) {
     body {
