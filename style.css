@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
-
 }
 
 :root {
@@ -13,11 +12,7 @@
     --mercury: #e8e8e8;
     --mariner: #3A97D4;
     --genoa: #20A672;
-    --vesuvius: #F46036;
     --mojo: #C44B34;
-    --cabaret: #ED5F74;
-    --wisteria: #A34FB4;
-    --fuchsia: #825FC3;
     --rajah: #F7CE74;
 
     /* Spacing */
@@ -107,14 +102,15 @@ th {
 
 .tip {
     padding: var(--half);
-    border-left: solid 4px var(--mojo);
+    border-left: solid 4px var(--rajah);
     background-color: var(--mercury);
 }
 
 blockquote {
     quotes: "“" "”" "‘" "’";
     padding: var(--half);
-    border-left: solid 4px var(--mojo);
+    font-style: italic;
+    border-left: solid 4px var(--rajah);
     background-color: var(--mercury);
 }
 
@@ -158,6 +154,10 @@ li:nth-child(even):before {
 
 li:nth-child(3n+3):before {
     background: url(hold3.png) no-repeat center/cover;
+}
+
+::selection {
+    background-color: var(--rajah);
 }
 
 /*
